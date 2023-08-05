@@ -10,8 +10,8 @@ class Cliente
     String nomeDoCliente;
     
     public Cliente(){
-        System.out.println("Criando um Cliente");
-        renda = 1000;
+        //System.out.println("Criando um Cliente");
+        //renda = 1000;
         double aleatorio = Math.random();
         if (aleatorio > 0.5)
           especial = true;    

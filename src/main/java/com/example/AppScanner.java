@@ -14,6 +14,7 @@ public static void main(String[] args) {
         System.out.println();
         System.out.println("Informe seu ano de nascimento: ");
         int anoNascimento = scanner.nextInt();
+        scanner.nextLine();
         System.out.println();
         System.out.println("Informe seu sexo: ");
         String sexo = scanner.nextLine();
@@ -27,8 +28,6 @@ public static void main(String[] args) {
         System.out.println(" A renda do cliente é:" + renda);
         System.out.println(" O ano de nascimento do cliente é:" + anoNascimento);
         System.out.println(" O sexo do cliente é:" + sexo);
-    
-    
 
         
     }
