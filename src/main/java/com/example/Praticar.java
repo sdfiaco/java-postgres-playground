@@ -1,22 +1,19 @@
 package com.example;
 
-
 class Praticar {
-    int fatorial;
+    int fatorial=8;
     int parcialFatorial = 1;
-    int tamanhoFatorial;
 
     public Praticar()
     {
-        for(int i = tamanhoFatorial; i>0; i--)
-        {
-        fatorial = i * parcialFatorial;
-        parcialFatorial = fatorial; 
-        }
-        //fatorial = parcialFatorial;
-
+        for(int i = fatorial; i>0; i--)
+            {
+            fatorial = i * parcialFatorial;
+            parcialFatorial = fatorial; 
+            }
+        
     }
-  
+    
 }
 
     

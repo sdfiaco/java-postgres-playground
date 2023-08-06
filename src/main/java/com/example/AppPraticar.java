@@ -1,17 +1,27 @@
 package com.example;
 
+import java.util.Scanner;
+
 public class AppPraticar 
 {
         public static void main(String[] args) 
         {
-            int fatorial = 10;
-            int parcialFatorial = 1;
-            for(int i = fatorial; i>0; i--)
+            Scanner scanner = new Scanner(System.in);
+            Praticar praticar = new Praticar();
+            String referencia = "SIM";
+            int numeroParaFatorar;
+            System.out.println("Deseja cálcular o fatorial de um número? Digite sim ou não"); 
+            String opcaoFatorial= scanner.nextLine();
+            
+            if (opcaoFatorial.equals (referencia))
             {
-            fatorial = i * parcialFatorial;
-            parcialFatorial = fatorial; 
+                System.out.println("Digite o número para cálculo do fatorial");
+                numeroParaFatorar = scanner.nextInt();
+                praticar.fatorial = numeroParaFatorar; 
+                System.out.println(praticar.parcialFatorial);
             }
-            System.out.println(fatorial);
+                else
+                  System.out.println("Não foi. Pq será?");
 
         }
 }
