@@ -1,8 +1,11 @@
 package com.example;
 
+import java.util.Scanner;
+
 class Praticar {
-    int fatorial=8;
+    int fatorial;
     int parcialFatorial = 1;
+    Scanner scanner = new Scanner(System.in);
 
     public Praticar()
     {
@@ -11,7 +14,7 @@ class Praticar {
             fatorial = i * parcialFatorial;
             parcialFatorial = fatorial; 
             }
-        
+
     }
     
 }

@@ -9,15 +9,13 @@ public class AppPraticar
             Scanner scanner = new Scanner(System.in);
             Praticar praticar = new Praticar();
             String referencia = "SIM";
-            int numeroParaFatorar;
             System.out.println("Deseja cálcular o fatorial de um número? Digite sim ou não"); 
             String opcaoFatorial= scanner.nextLine();
             
             if (opcaoFatorial.equals (referencia))
             {
-                System.out.println("Digite o número para cálculo do fatorial");
-                numeroParaFatorar = scanner.nextInt();
-                praticar.fatorial = numeroParaFatorar; 
+                System.out.println("Digite Número para fatorar: ");
+                praticar.fatorial = scanner.nextInt();
                 System.out.println(praticar.parcialFatorial);
             }
                 else
