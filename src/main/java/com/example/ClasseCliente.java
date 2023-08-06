@@ -23,6 +23,10 @@ class Cliente
           segmentoEspecial = "Não";
         segmentoEspecial = segmentoEspecial.toUpperCase();
     }
+
+   public String toString(){
+    return nomeDoCliente;
+   }
    }
    public class ClasseCliente {
 
