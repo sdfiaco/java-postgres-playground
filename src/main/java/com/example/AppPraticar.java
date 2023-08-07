@@ -10,9 +10,10 @@ public class AppPraticar
             Praticar praticar = new Praticar();
             String referencia = "SIM";
             System.out.println("Deseja cálcular o fatorial de um número? Digite sim ou não"); 
-            String opcaoFatorial= scanner.nextLine();
+            String opcao = scanner.nextLine();
+            String opcaoMAISCULO = opcao.toUpperCase(); 
             
-            if (opcaoFatorial.equals (referencia))
+            if (opcaoMAISCULO.equals (referencia))
             {
                 System.out.println("Digite Número para fatorar: ");
                 int fatorial = scanner.nextInt();
@@ -25,3 +26,4 @@ public class AppPraticar
 
         }
 }
+
