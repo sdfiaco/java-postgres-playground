@@ -1,21 +1,24 @@
 package com.example;
 
-import java.util.Scanner;
+public class Praticar{
 
-class Praticar {
     int fatorial;
-    int parcialFatorial = 1;
-    Scanner scanner = new Scanner(System.in);
+    int parcialFatorial = 1; 
 
-    public Praticar()
-    {
+    public void setFatorial(int fatorial) {
+        this.fatorial = fatorial;
+    } 
+    
+    public int getFatorial() {
         for(int i = fatorial; i>0; i--)
             {
             fatorial = i * parcialFatorial;
             parcialFatorial = fatorial; 
             }
-
+  
+        return fatorial;
     }
+
     
 }
 

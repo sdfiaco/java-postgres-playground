@@ -15,8 +15,10 @@ public class AppPraticar
             if (opcaoFatorial.equals (referencia))
             {
                 System.out.println("Digite Número para fatorar: ");
-                praticar.fatorial = scanner.nextInt();
-                System.out.println(praticar.parcialFatorial);
+                int fatorial = scanner.nextInt();
+                praticar.setFatorial(fatorial); 
+                fatorial = praticar.getFatorial(); 
+                System.out.println(fatorial); S
             }
                 else
                   System.out.println("Não foi. Pq será?");
