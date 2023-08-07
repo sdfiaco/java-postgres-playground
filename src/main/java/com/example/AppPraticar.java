@@ -18,7 +18,7 @@ public class AppPraticar
                 int fatorial = scanner.nextInt();
                 praticar.setFatorial(fatorial); 
                 fatorial = praticar.getFatorial(); 
-                System.out.println(fatorial); S
+                System.out.println(fatorial);
             }
                 else
                   System.out.println("Não foi. Pq será?");
