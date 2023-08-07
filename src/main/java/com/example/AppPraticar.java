@@ -10,10 +10,10 @@ public class AppPraticar
             Praticar praticar = new Praticar();
             String referencia = "SIM";
             System.out.println("Deseja cálcular o fatorial de um número? Digite sim ou não"); 
-            String opcao = scanner.nextLine();
-            String opcaoMAISCULO = opcao.toUpperCase(); 
+            String opcaoFatorar = scanner.nextLine();
+            String opcaoFatorarMAIUSCULO = opcaoFatorar.toUpperCase(); 
             
-            if (opcaoMAISCULO.equals (referencia))
+            if (opcaoFatorarMAIUSCULO.equals (referencia))
             {
                 System.out.println("Digite Número para fatorar: ");
                 int fatorial = scanner.nextInt();
@@ -21,8 +21,20 @@ public class AppPraticar
                 fatorial = praticar.getFatorial(); 
                 System.out.println(fatorial);
             }
-                else
-                  System.out.println("Não foi. Pq será?");
+
+            System.out.println(); 
+            scanner.nextLine();
+            System.out.println("Deseja verificar se um número é multiplo de três? Digite sim ou não");
+            String opcaoVerMultiploTres = scanner.nextLine();
+            String opcaoVerMultiploTresMAISCULO = opcaoVerMultiploTres.toUpperCase(); 
+
+            if (opcaoVerMultiploTresMAISCULO.equals (referencia))
+            {
+                System.out.println("Digite Número para verificar se é multiplo ");
+                int multiploTres = scanner.nextInt();
+                praticar.setVerificaMultiploTres(multiploTres);
+                System.out.println(praticar.getMultiploTres());
+            }                    
 
         }
 }
