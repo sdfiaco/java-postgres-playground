@@ -22,8 +22,8 @@ public class AppPraticar
                 System.out.println(fatorial);
             }
 
-            System.out.println(); 
-            scanner.nextLine();
+            //System.out.println(); 
+            //scanner.nextLine();
             System.out.println("Deseja verificar se um número é multiplo de três? Digite sim ou não");
             String opcaoVerMultiploTres = scanner.nextLine();
             String opcaoVerMultiploTresMAISCULO = opcaoVerMultiploTres.toUpperCase(); 
@@ -34,7 +34,10 @@ public class AppPraticar
                 int multiploTres = scanner.nextInt();
                 praticar.setVerificaMultiploTres(multiploTres);
                 System.out.println(praticar.getMultiploTres());
+                System.out.println("Até breve."); 
             }                    
+                else
+                 System.out.println("Até breve."); 
 
         }
 }
