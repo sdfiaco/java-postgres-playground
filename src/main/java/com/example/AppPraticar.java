@@ -23,7 +23,7 @@ public class AppPraticar
             }
 
             //System.out.println(); 
-            //scanner.nextLine();
+            scanner.nextLine();
             System.out.println("Deseja verificar se um número é multiplo de três? Digite sim ou não");
             String opcaoVerMultiploTres = scanner.nextLine();
             String opcaoVerMultiploTresMAISCULO = opcaoVerMultiploTres.toUpperCase(); 
