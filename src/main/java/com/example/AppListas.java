@@ -1,53 +1,35 @@
 package com.example;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class AppListas {
     public static void main(String[] args) {
-        //Cliente vetorClientes[] = new Cliente[5] ; 
-        List<Cliente> listaClientes = new ArrayList<>();
-        Cliente cliente1 = new Cliente();
-        Cliente cliente2 = new Cliente();
-        Cliente cliente3 = new Cliente();
-        Cliente cliente4 = new Cliente();
-        Cliente cliente5 = new Cliente();
-
-        cliente1.nomeDoCliente = "Silvério Del Fiaco";
-        cliente2.nomeDoCliente = "Biel Del Fiacco";
-        cliente3.nomeDoCliente = "Kiko Del Fiaco";
-        cliente4.nomeDoCliente = "Letisa Dalla Nora";
-        cliente5.nomeDoCliente = "Shadown";
         
-        listaClientes.add(cliente1);
-        listaClientes.add(cliente2);
-        listaClientes.add(cliente3);
-        listaClientes.add(cliente4);
-        listaClientes.add(cliente5);
-        listaClientes.add(cliente1);
-        listaClientes.add(cliente2);
-        listaClientes.add(cliente3);
-        listaClientes.add(cliente4);
-        listaClientes.add(cliente5);
-        listaClientes.add(cliente2);
-        listaClientes.add(cliente3);
-        listaClientes.add(cliente2);
-        listaClientes.add(cliente3);
-        listaClientes.add(cliente2);
-        listaClientes.add(cliente3);
+        ArrayList<String> clienteList = new ArrayList<String>(); 
+        Scanner scanner = new Scanner(System.in); 
+        String nomeCliente;
+        String referencia = "SIM";
+        String opcaoCliente = "SIM";
+        //String opcaoClienteMudaCaixa;
 
-        for (var cliente : listaClientes) {
+        while (opcaoCliente.equals (referencia))
+        {
+            System.out.println("Digite nome de cliente para ser adicionado à lista: ");
+            nomeCliente = scanner.nextLine(); 
+            clienteList.add(nomeCliente);
+            System.out.println("Deseja adicionar outro nome? Responda 'sim' ou 'não'.");
+            opcaoCliente = scanner.nextLine();
+            opcaoCliente = opcaoCliente.toUpperCase(); 
+        }
+
+        Collections.sort(clienteList);
+        
+        for (var cliente : clienteList) {
             System.err.println(cliente);
         }
 
-        //System.out.println(listaClientes);
-
-
-       // System.out.println(cliente1.nomeDoCliente);
-       // System.out.println(cliente2.nomeDoCliente);
-       // System.out.println(cliente3.nomeDoCliente);
-       // System.out.println(cliente4.nomeDoCliente);
-        // System.out.println(cliente5.nomeDoCliente);
         
     }
     
