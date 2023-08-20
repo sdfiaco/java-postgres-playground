@@ -21,7 +21,16 @@ public class AppBD {
             carregarDriverJDBC(); 
             listarEstados(conn); 
             LocalizarEstado(conn,"RR"); 
+            var produto = new produto();
+            var marca = new Marca();
+            marca.setId(1L);
+            produto.setMarca(marca);
+            produto.setValor(256.85); 
+            produto.setNome("Produto Teste");
+            //inserirProduto(conn, produto);
+            excluirProduto(conn, 203L);
             listarDadosTabela(conn, "produto"); 
+
         }
         catch (SQLException e) 
         {
@@ -30,7 +39,39 @@ public class AppBD {
 
 
     }
-  private void listarDadosTabela(Connection conn, String tabela) {
+  private void excluirProduto(Connection conn, long id){
+    var sql = "delete from produto where id = ?";
+    try {
+        var statement = conn.prepareStatement(sql);
+        statement.setLong(1, id); 
+        statement.executeUpdate();
+    } catch (SQLException e) {
+        
+        System.err.println("Erro ao executar exclusão do SQL. " + e.getMessage());
+    }
+    }
+
+private void inserirProduto(Connection conn, produto produto) {
+    var sql = "insert into produto (nome, marca_ID, valor) values (?, ?, ?)";
+    try {
+        var statement = conn.prepareStatement(sql);
+        statement.setString(1, produto.getNome());
+        statement.setLong(2, produto.getMarca().getId());
+        statement.setDouble(3, produto.getValor());
+        statement.executeUpdate();
+
+
+    } catch (SQLException e) {
+        System.err.println("Erro ao executar inserção ao SQL. " + e.getMessage());
+        
+    } 
+
+    }
+
+private void inserirProduto(produto produto) {
+    }
+
+private void listarDadosTabela(Connection conn, String tabela) {
        var sql = "select * from " + tabela; 
        //System.out.println(sql); 
        try
