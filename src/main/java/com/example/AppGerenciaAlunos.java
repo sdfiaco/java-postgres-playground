@@ -10,9 +10,9 @@ public static void main(String[] args)
 {
 
     Scanner scanner = new Scanner(System.in);
-    int numeroMaximoAlunosTurma = 30;
+    int numeroMaximoAlunosTurma = 6;
     String insereAluno;
-    String alunosTurma[][] = new String [6][6]; 
+    String alunosTurma[][] = new String [numeroMaximoAlunosTurma][6]; 
     alunosTurma[0][0] = "Nome";
     alunosTurma[0][1] = "Matemática";
     alunosTurma[0][2] = "Português";
@@ -26,7 +26,7 @@ public static void main(String[] args)
 
     if (insereAluno.equals("SIM"))
     {
-        while(insereAluno.equals("SIM") && contAluno<6)
+        while(insereAluno.equals("SIM") && contAluno<numeroMaximoAlunosTurma)
         {
             
             //scanner.nextLine();
@@ -45,8 +45,15 @@ public static void main(String[] args)
         }    
     }
 
-    for(int j=0; j<contAluno; j++)
-    System.out.println(Arrays.toString(alunosTurma[j]);
+    for(int i=0; i<contAluno; i++)
+    {
+        for(int j = 0; j<6; j++)
+        {
+            System.out.printf(alunosTurma[i][j]);
+            System.out.println();
+        }
+    }
+    
 
 }
 
