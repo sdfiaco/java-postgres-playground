@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class decoralista 
 {
 
-    ArrayList<String> lista = new ArrayList<String>();
+    ArrayList<String> lista = new ArrayList();
     int QtdNomes;
     String imprimeLista;
     String insereNome; 
@@ -40,7 +40,7 @@ public class decoralista
         Collections.sort(lista);
         for(var nome : lista)
         System.out.println(nome);
-        return ("Está é a lista completa!");
+        return ("Esta é a lista completa!");
     }
     
     
