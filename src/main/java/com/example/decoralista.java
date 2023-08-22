@@ -28,8 +28,10 @@ public class decoralista
             insereOutro = scanner.nextLine();   
             insereOutro = insereOutro.toUpperCase(); 
         }
-        System.out.println("Foram inseridos " + QtdNomes + "nomes.");
-        return ("Inserção Concluída.");
+        System.out.println("Foram inseridos " + QtdNomes + " nomes.");
+        System.out.println();
+     
+        return("-------------------------------------------------------------------------------------");
     }
 
 
